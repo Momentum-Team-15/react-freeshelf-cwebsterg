@@ -4,6 +4,9 @@ import {useState} from 'react';
 const App = ({bookData}) => {
   return (
     <div className="app-container">
+      <header>
+        <h1>Freeshelf - Come and Get It!</h1>
+      </header>
       {bookData.map((book) => (
         <div className="book-card">
           <div>
@@ -13,7 +16,7 @@ const App = ({bookData}) => {
             <Description
             publisher={book.publisher}
             date={book.publicationDate}
-            detail={book.detailedDescription}/>
+            details={book.detailedDescription}/>
           </div>
             <img className="cover" src={book.coverImageUrl} alt="book cover"/>
         </div>
